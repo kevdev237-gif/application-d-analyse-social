@@ -1,4 +1,5 @@
-from flask import Flask, render_template, request, redirect
+from flask import Flask, render_template, request
+app = Flask(__name__)
 import sqlite3
 
 app = Flask(__name__)
@@ -118,5 +119,4 @@ def data():
     return render_template("data.html", rows=rows)
 
 if __name__ == "__main__":
-   if __name__ == "__main__":
-    app.run()
+    app.run(host="0.0.0.0", port=5000)
