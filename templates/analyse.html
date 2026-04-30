@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="card">
+
+    <h2>📊 Dashboard Analyse</h2>
+
+    <p><strong>Total étudiants :</strong> {{ total }}</p>
+
+    <p><strong>Moyenne réseaux sociaux :</strong> {{ avg_social }} h</p>
+
+    <p><strong>Moyenne étude :</strong> {{ avg_study }} h</p>
+
+    <h3>📉 Impact sur les notes</h3>
+
+    {% if impacts %}
+        <ul>
+            {% for k, v in impacts.items() %}
+                <li>{{ k }} : {{ v }}</li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>Aucune donnée disponible</p>
+    {% endif %}
+
+</div>
+
+{% endblock %}

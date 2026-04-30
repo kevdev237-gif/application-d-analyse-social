@@ -1,0 +1,78 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="card">
+    <h2>Questionnaire étudiant</h2>
+
+    <form method="POST" action="/submit">
+
+        Age:<br>
+        <input type="number" name="age"><br><br>
+
+        Niveau:<br>
+        <select name="level">
+            <option>L1</option>
+            <option>L2</option>
+            <option>L3</option>
+        </select><br><br>
+
+        Filière:<br>
+        <input type="text" name="field"><br><br>
+
+        Heures réseaux sociaux:<br>
+        <input type="number" name="social_hours"><br><br>
+
+        Réseau principal:<br>
+        <select name="main_network">
+            <option>TikTok</option>
+            <option>Instagram</option>
+            <option>Facebook</option>
+            <option>YouTube</option>
+        </select><br><br>
+
+        Moment usage:<br>
+        <select name="usage_time">
+            <option>Matin</option>
+            <option>Après-midi</option>
+            <option>Nuit</option>
+        </select><br><br>
+
+        Heures d’étude:<br>
+        <input type="number" name="study_hours"><br><br>
+
+        Concentration:<br>
+        <select name="concentration">
+            <option>Faible</option>
+            <option>Moyenne</option>
+            <option>Élevée</option>
+        </select><br><br>
+
+        Distraction téléphone:<br>
+        <select name="distraction">
+            <option>Oui</option>
+            <option>Non</option>
+        </select><br><br>
+
+        Impact notes:<br>
+        <select name="grades_impact">
+            <option>Positif</option>
+            <option>Négatif</option>
+            <option>Neutre</option>
+        </select><br><br>
+
+        Fatigue mentale:<br>
+        <select name="mental_fatigue">
+            <option>Oui</option>
+            <option>Non</option>
+        </select><br><br>
+
+        Procrastination:<br>
+        <select name="procrastination">
+            <option>Oui</option>
+            <option>Non</option>
+        </select><br><br>
+
+        <button type="submit">Envoyer</button>
+    </form>
+</div>
+{% endblock %}

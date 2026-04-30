@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="card">
+    <h2>📂 Données collectées</h2>
+
+    <table border="1" cellpadding="8">
+        <tr>
+            <th>ID</th>
+            <th>Age</th>
+            <th>Niveau</th>
+            <th>Filière</th>
+            <th>Social</th>
+            <th>Étude</th>
+            <th>Impact</th>
+        </tr>
+
+        {% for r in rows %}
+        <tr>
+            <td>{{ r[0] }}</td>
+            <td>{{ r[1] }}</td>
+            <td>{{ r[2] }}</td>
+            <td>{{ r[3] }}</td>
+            <td>{{ r[4] }}</td>
+            <td>{{ r[7] }}</td>
+            <td>{{ r[10] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</div>
+{% endblock %}
